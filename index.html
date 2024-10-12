@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"a href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo"><p>ANIME.COM</p></div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+            <li><a href="contect/contect.html">CONTECT</a></li>
+            <li><a href="your name movie/your name.html">YOUR NAME</a></li>
+            <li><a href="hard hit movie/hard hit.html">HARD HIT</a></li>
+            <li><a href="#">HOME</a></li>
+        </ul>
+    </div>
+<div class="search">
+    <input type="text" placeholder="search">
+    <h1>WATCH FREE ANIME MOVIES</h1>
+    <video autoplay loop muted playes-inline>
+        <source src="head.mp4" type="video/mp4">
+    </video>
+</div>
+
+<!---TRAILER PART-->
+<div class="container">
+    <div class="slider">
+        <div class="slides" style="--img: url('img1.jpg')">
+            <div class="content">
+                <h1>YOUR NAME</h1>
+                <p>HE IS MOST POPULAR MOVIE</p>
+            </div>
+        </div>
+        <div class="slides" style="--img: url('img2.jpg')">
+            <div class="content">
+                <h1>JUJUTSU KAISEN</h1>
+                <p>HE IS MOST POPULAR ANIME SEASONS IN THE WORLD</p>
+            </div>
+        </div>
+        <div class="slides" style="--img: url('img3.jpg')">
+            <div class="content">
+                <h1>POKEMON</h1>
+                <p>HE IS MOST POPULAR ANIME </p>
+            </div>
+        </div>
+        <div class="slides" style="--img: url('img4.jpg')">
+            <div class="content">
+                <h1>ONE-PUNCHMAN</h1>
+                <p>HE IS MOST POPULAR ANIME</p>
+            </div>
+        </div>
+        <div class="slides" style="--img: url('img5.jpg')">
+            <div class="content">
+                <h1>ONE PEICE</h1>
+                <p>HE IS MOST POPUAR ANIME </p>
+            </div>
+        </div>
+        <div class="slides" style="--img: url('img6.jpg')">
+            <div class="content">
+                <h1>HARRY POTTER</h1>
+                <P>HE IS POST POPULAR SEASONS</P>
+            </div>
+        </div>
+    </div>
+    <div class="buttons">
+        <span class="prev"></span>
+        <span class="next"></span>
+    </div>
+</div>
+<div class="color">
+<script>
+    let next = document.querySelector('.next')
+    let prev = document.querySelector('.prev')
+    let slider = document.querySelector('.slider')
+
+    next.addEventListener('click', function(){
+        let slides = document.querySelectorAll('.slides')
+        slider.appendChild(slides[0]);
+    })
+
+    prev.addEventListener('click', function(){
+        let slides = document.querySelectorAll('.slides')
+        slider.prepend(slides[slides.length -1]);
+    })
+</script>
+<!--end trailer part-->
+<!--movies 1-->
+
+<div class="gallery1">
+    <div class="content1">
+        <img src="youe name.jpg">
+        <p>YOUR NAME FULL MOVIE IN HINDI</p>
+
+        <a href="your name movie/your name.html"><button class="watch">WATCH</button></a>
+    </div>
+
+    <div class="content1">
+        <img src="shin chan bakomori.jpg">
+       <p>SHIN CHAN BAKOMORI MOVIE IN HINDI</p>
+        <a href="shin chan bakomori/shinchan bakomori.html"><button class="watch">WATCH</button></a>
+    
+    </div>
+
+    <div class="content1">
+        <img src="white snake.jpg">
+        <p>WHITE SNAKE FULL MOVIE IN HINDI</p>
+        
+        <a href="white snake movie/white snake.html"><button class="watch">WATCH</button></a>
+    </div>
+
+    <div class="content1">
+        <img src="dragon nest.jpg">
+        <p>DRAGON NEST FULL MOVIE IN HINDI</p>
+        
+        <a href="dragon nest movie/dragon nest.html"><button class="watch">WATCH</button></a>
+    </div>
+
+</div>
+<!--COMPLETE-->
+<!--movies 2-->
+<div class="gallery2">
+    <div class="content1">
+        <img src="american carnage movie.jpg">
+        <p>AMERICAN CARNAGE FULL MOVIE IN HINDI</p>
+
+        <a href="american carnage movie/american carnage.html"><button class="watch">WATCH</button></a>
+    </div>
+
+    <div class="content1">
+        <img src="tere zameen per.jpg">
+        <p>TERE ZAMEEN PER MOVIE IN HINDI</p>
+        <a href="tere zameen per/tere zameen.html"><button class="watch">WATCH</button></a>
+    
+    </div>
+
+    <div class="content1">
+        <img src="flight 914.jpg">
+       <p>FLIGHT 914 FULL MOVIE IN HINDI</p>
+        
+        <a href="flight 914 movie/flight 914.html"> <button class="watch">WATCH</button></a>
+    </div>
+
+    <div class="content1">
+        <img src="hard hit movie.jpg">
+        <p>HARD HIT FULL MOVIE IN HINDI</p>
+        
+       <a href="hard hit movie/hard hit.html"> <button class="watch">WATCH</button></a>
+    </div>
+
+</div>
+<!--end part2-->
+<!--movie3-->
+<div class="gallery3">
+    <div class="content1">
+        <img src="coming soon.jpg">
+        <p>COMIMG SOON</p>
+
+        <button class="watch">WATCH</button>
+    </div>
+
+    <div class="content1">
+        <img src="coming soon.jpg">
+        <p>COMING SOON</p>
+        <button class="watch">WATCH</button>
+    
+    </div>
+
+    <div class="content1">
+        <img src="coming soon.jpg">
+        <p>COMING SOON</p>
+        
+        <button class="watch">WATCH</button>
+    </div>
+
+    <div class="content1">
+        <img src="coming soon.jpg">
+        <p>COMING SOON</p>
+        
+        <button class="watch">WATCH</button>
+    </div>
+
+</div>
+<!--end movie 3-->
+<!--movie part4 -->
+<div class="gallery4">
+    <div class="content1">
+        <img src="coming soon.jpg">
+        <p>COMING SOON</p>
+
+        <button class="watch">WATCH</button>
+    </div>
+
+    <div class="content1">
+        <img src="coming soon.jpg">
+        <p>COMING SOON</p>
+        <button class="watch">WATCH</button>
+    
+    </div>
+
+    <div class="content1">
+        <img src="coming soon.jpg">
+        <p>COMING SOON</p>
+        
+        <button class="watch">WATCH</button>
+    </div>
+
+    <div class="content1">
+        <img src="coming soon.jpg">
+        <p>COMING SOON</p>
+        
+        <button class="watch">WATCH</button>
+    </div>
+
+</div>
+<!--futer-->
+<div class="footer">
+    <div class="con">
+        <h1>CONTECT</h1>
+      <img src="me1.jpg">   
+    </div>
+    <div class="mess">
+        <a href="https://www.youtube.com/@mrgamingedit"><img src="youtube.png" height="70px" width="70px"></a>
+    
+        <a href="contect/contect.html"><img src="watsapp.jpg"height="70px" width="70px"></a>
+    </div>
+    <div class="number">
+        <h1>contect number</h1>
+        <P>03221172177</P>
+    </div>
+</div>
+
+</div>
+</body>
+</html>

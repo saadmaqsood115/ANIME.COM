@@ -1,0 +1,452 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'open sans',sans-serif ;
+}
+.nav{
+    display: flex;
+    height: 80px;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 100px;
+}
+.nav .logo p{
+    font-size: 30px;
+    color: white;
+    font-weight: 600;
+}
+.nav .logo p:hover{
+    color: blue;
+}
+.nav ul{
+    display: flex;
+    list-style: none;
+}
+.nav ul li{
+    margin: 0 5px;
+}
+.nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 10px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.nav ul li a:hover{
+color: #1b1b1b;
+background-color: white;
+}
+.nav .menu-btn i{
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+#click{
+    display: none;
+}
+.search input{
+    font-size: 30px;
+    padding: 18px;
+    border-radius: 25px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0,);
+    margin: 10px;
+    margin-top: 400px;
+}
+.search h1{
+    font-size: 25px;
+    margin: 10px;
+    color: red;
+}
+.search input:hover{
+    transform: scale(1.1);
+}
+.search video{
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+/* navbar responsive */
+@media (max-width:940px){
+    .nav .menu-btn i{
+        display: block;
+    }
+    #click:checked ~ .menu-btn i::before{
+        content: "\f00d";
+    }
+    .nav .logo p{
+        font-size: 20px;
+        margin-right: 20px;
+    }
+    .nav ul{
+position: fixed;
+        top: 80px;
+        left: -100%;
+        background-color: #1b1b1b;
+        height: 80vh;
+        width: 80%;
+        display: block;
+        text-align: center;
+    }
+    #click:checked ~ ul{
+        left: 0%;
+    }
+    .nav ul li{
+        margin: 40px 0;
+    }
+    .nav ul li a{
+        display: block;
+    }
+    .nav ul li a:hover{
+        color: cyan;
+        }
+        
+        .search input{
+            font-size: 10px;
+            padding: 5px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0,);
+        margin-top: 5px;
+        }
+        .search video{
+            background-position: top;
+            width: 100%;
+            right: 0;
+            position: relative;
+            z-index: -1;
+            height: auto;
+        }
+        .search h1{
+            font-size: 10px;
+            color: red;
+            margin: 0;
+        }
+}
+/** end of navbar **/
+
+/** trailer **/
+.container{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    background-color: black;
+}
+.container .slider{
+    position: absolute;
+    inset: 80px 200px 80px 80px;
+background: #ccc;
+border-radius: 20px;
+}
+.slider .slides{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 240px;
+    height: 320px;
+    background: var(--img);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    transform: 0.5s;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.slider .slides:nth-child(1),
+.slider .slides:nth-child(2){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(0);
+    box-shadow: 0 25px 50px rgba(0, 0, 0,0);
+    background-size: cover;
+
+}
+.slider .slides:nth-child(3){
+    left: calc(50% + 240px);
+    background-size: cover;
+
+}
+.slider .slides:nth-child(4){
+    left: calc(50% + 500px);
+    background-size: cover;
+
+}
+.slider .slides:nth-child(5){
+    left: calc(50% + 760px);
+    background-size: cover;
+
+}
+.slider .slides:nth-child(6){
+    left: calc(50% + 1020px);
+    background-size: cover;
+opacity: 0;
+    
+}
+.container .buttons{
+    position: absolute;
+    bottom: 15px;
+    display: flex;
+    gap: 20px;
+}
+.container .buttons span{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.container .buttons span::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-top: 4px solid white;
+    border-left: 4px solid white;
+    transform: rotate(315deg) translate(2px, 2px);
+}
+.container .buttons span:nth-child(2)::before{
+    transform: rotate(135deg) translate(2px, 2px);
+}
+.container .buttons span:active{
+    opacity: 0.5;
+}
+.container .content{
+    position: relative;
+    padding: 40px;
+    max-width: 600px;
+    transition: 0.25s;
+    transition-delay: 0s;
+    transform: translateY(40px);
+    z-index: 10000;
+    opacity: 0;
+}
+.content h1{
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+}
+.content p{
+    color: rgb(255, 255, 255);
+}
+
+.slider .slides:nth-child(1) .content,
+.slider .slides:nth-child(2) .content{
+opacity: 1;
+transform: translateY(0px);
+opacity: 1;
+transition-delay: 0.5s;
+}
+
+/** making trailer part responsive **/
+@media (max-width:900px){
+    .container{
+        background-color: black; 
+        margin-top: 0;
+        
+    }
+    .container .slider{
+        width: 100%;
+        align-items: center;
+        background-size: cover;
+        left: 0;
+        margin-top: 5px;
+        background-position: top;
+    }
+    .container{
+        position: relative;
+    }
+    .slider{
+        position: absolute;
+        inset: 40px 40px 200px 40px;
+    }
+    .slider .slides{
+        
+        width: 100px;
+        height: 100px;
+        bottom: -170px;
+        top: initial;
+    }
+    .slider .slides:nth-child(1),
+.slider .slides:nth-child(2){
+    top: initial;
+    bottom: 0px;
+}
+.slider .slides:nth-child(3){
+    left: 0;
+}
+.slider .slides:nth-child(4){
+left: 120px;
+}
+.slider .slides:nth-child(5){
+    left: 240px;
+    }
+    .slider .slides:nth-child(6){
+        left: 360px;
+        }
+}
+/** end trailer part **/
+.color{
+    background-image: url('background\ img.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.gallery1{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin: 50px 0;
+     margin-top: 55%;
+}
+.content1{
+   
+    width: 20%;
+    margin: 15px;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    padding-top: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0);
+    transition: -4s;
+    background-color: white;
+}
+.content1:hover{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translate(0px, -8px);
+}
+.content1 img{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+.content1 button{
+text-align: center;
+font-size: 24px;
+color: white;
+width: 100%;
+padding: 15px;
+border: 0;
+outline: none;
+margin-top: 5px;
+background-color: rgb(255, 0, 0);
+cursor: pointer;
+}
+/**responsive**/
+@media (max-width:1000px){
+    .gallery1{
+        margin-top: 2px;
+    }
+    .content1{
+        margin-top: 2px;
+        width: 45%;
+    }
+}
+@media (max-width:750px){
+    .content1{
+        width: 100%;
+    }
+}
+/** movie part2 **/
+.gallery2{
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin: 50px 0;
+}
+/** movies part3 **/
+.gallery3{
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin: 50px 0;
+}
+/** end movie part3 **/
+/** movie part4 **/
+.gallery4{
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin: 50px 0;
+}
+/** end movie part 4**/
+/** footer **/
+.footer .con{
+background-color: black;
+}
+.footer .con h1{
+    color: white;
+    text-align: center;
+    justify-content: center;
+    font-size: 50px;
+    background-color: rgb(49, 49, 78);
+}
+.footer .con img{
+    background-color: rgb(62, 62, 100);
+    margin: 10px;
+    height: 350px;
+    width: 250px;
+    box-shadow: -1px 1px 10px rgb(255, 0, 0);
+    border-radius: 10px;
+}
+.footer .mess{
+    background-color: rgb(38, 38, 61);
+}
+.footer .mess img{
+    
+    display: flex;
+    border-radius: 20px;
+    text-align: center;
+    margin-left: 30px;
+    box-shadow: -1px 1px 10px rgb(255, 0, 0);
+    display: inline-block;
+}
+.footer .number{
+    background-color: rgb(37, 37, 95);
+}
+.footer .number h1{
+    text-align: center;
+    align-items: center;
+    font-size: 1rem;
+    color: white;
+}
+.footer .number p{
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
